@@ -17,7 +17,7 @@ const applicationSchema = new mongoose.Schema({
             validate : [validator.isEmail , "Please provide valid email"]
         },
         phone : {
-            ttype : Number,
+            type : Number,
             required : true
         },
         address : {
@@ -75,4 +75,4 @@ const applicationSchema = new mongoose.Schema({
     
 });
 
-export const Appliaction = mongoose.Model("Application",applicationSchema);
+export const Application = mongoose.model("Application",applicationSchema);
