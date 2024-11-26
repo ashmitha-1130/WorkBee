@@ -8,6 +8,7 @@ import applicationRouter from "./routes/applicationRouter.js";
 import jobRouter from "./routes/jobRouter.js";
 import { dbConnection } from "./database/dbConnection.js";
 import { errorMiddleware } from "./middlewares/error.js";
+import { newsLetterCron } from "./automation/newsLetterCron.js";
 
 
 const app = express();
@@ -32,6 +33,7 @@ app.use('/api/v1/user',userRouter);
 app.use('/api/v1/application',applicationRouter);
 app.use('/api/v1/job',jobRouter);
 
+newsLetterCron()
 dbConnection();
 app.use(errorMiddleware);
 

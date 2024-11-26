@@ -51,9 +51,9 @@ const jobSchema = new mongoose.Schema({
         type : String,
         required : true
    },
-   newsLetterssent : {
+   newsLettersSent : {
         type : Boolean,
-     //    required : true
+        default: false
    },
    jobPostedOn : {
         type : Date,
